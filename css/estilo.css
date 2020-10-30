@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Helvetica, sans-serif;
+    background-color: rgb(234, 239, 248);
+}
+
+h1, h2{
+    text-align: center;
+    margin: 10px;
+}
+#conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    color: rgba(252, 252, 252, 0);
+    
+}
+
+#conteiner p {
+    font-size: 20px;
+    width: 300px;
+    color: rgb(67, 67, 170);
+}
+
+#areaCanvas{
+    background-color: rgb(214, 64, 64);
+    border: 5px solid gray;
+}
