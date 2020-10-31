@@ -25,6 +25,7 @@ h1, h2{
     font-size: 20px;
     width: 300px;
     color: rgb(67, 67, 170);
+    margin: 20px;
 }
 
 #areaCanvas{
