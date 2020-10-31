@@ -12,6 +12,12 @@ h1, h2{
     text-align: center;
     margin: 10px;
 }
+
+h1{
+     font-family: 'Syne Tactile', cursive;
+     color: red;
+     font-size: 40px;
+}
 #conteiner{
     display: flex;
     align-items: center;
@@ -21,14 +27,37 @@ h1, h2{
     
 }
 
-#conteiner p {
+
+#conteiner .texto .controles {
     font-size: 20px;
     width: 300px;
     color: rgb(67, 67, 170);
-    margin: 20px;
+    margin: 20px 20px 10px 20px;
 }
 
 #areaCanvas{
-    background-color: rgb(214, 64, 64);
+    background-color: rgb(160, 46, 46);
     border: 5px solid gray;
 }
+
+
+#conteiner .texto .creditos {
+    font-size: 16px;
+    width: 300px;
+    margin: 10px 20px;
+}
+
+#conteiner .texto .creditos a, .pageCredLink {
+    color: rgb(143, 14, 14);
+    text-decoration: none;
+}
+#conteiner .texto .creditos a:hover, .pageCredLink:hover{
+    text-decoration: underline;
+}
+
+.pageCred{
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+ 

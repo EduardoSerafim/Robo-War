@@ -83,14 +83,15 @@ function moverrobo() {
     posiRobo1.y = Math.max(0, Math.min(canvas.height - posiRobo1.hg, posiRobo1.y));
 }
 
+//sprites na tela
 function inserirImagem() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const robo = new Image();
-    robo.src = "../sprites/robo1.png"
+    robo.src = "../sprites/robotica.png"
     ctx.drawImage(robo, posiRobo1.x, posiRobo1.y)
 
     const robo2 = new Image();
-    robo2.src = "../sprites/robo2.png"
+    robo2.src = "../sprites/tanque.png"
     ctx.drawImage(robo2, posiRobo2.x, posiRobo2.y)
     
     
