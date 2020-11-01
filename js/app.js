@@ -210,11 +210,14 @@ function colisao(){
     
     if(numColisao == 5){
         if (vidaRobo1 > vidaRobo2) {
-            alert("O robo Azul venceu! pressione OK para jogar recomeçar")
+            alert("O robo Azul venceu! pressione OK para recomeçar")
             
            
-        }else{
-            alert("O robo branco venceu! pressione OK para jogar recomeçar")
+        }else if(vidaRobo1 == vidaRobo2){
+            alert("Parece que houve um empate! pressione OK para recomeçar")
+        }
+        else{
+            alert("O robo branco venceu! pressione OK para recomeçar")
         }
         numColisao = 0;
         //atualiza a página após o fim da rodada
