@@ -183,10 +183,51 @@ function moverrobo2() {
     posiRobo2.y = Math.max(0, Math.min(canvas.height - posiRobo2.hg, posiRobo2.y));
 }
 
+let vidaRobo1 = 100;
+let vidaRobo2 = 100;
+let numColisao = 0;
+function colisao(){
+    if(posiRobo1.x < posiRobo2.x + posiRobo2.wi &&
+        posiRobo1.x + posiRobo1.wi > posiRobo2.x &&
+        posiRobo1.y < posiRobo2.y + posiRobo2.hg &&
+        posiRobo1.y + posiRobo1.hg > posiRobo2.y){
+        
+        posiRobo1.x = 10
+        posiRobo1.y = 10
+        posiRobo2.x = 990
+        posiRobo2.y = 480
+
+        vidaRobo1 -= Math.floor(Math.random()*20)
+        vidaRobo2 -= Math.floor(Math.random()*20)
+        numColisao++
+    }
+
+    const vidaNaTelaRobo1 = document.querySelector('.placar')
+    vidaNaTelaRobo1.textContent = "Vida do Robo azul: "+vidaRobo1
+    
+    const vidaNaTelaRobo2 = document.querySelector('.placar2')
+    vidaNaTelaRobo2.textContent = "Vida do Robo branco: " +vidaRobo2
+    
+    if(numColisao == 5){
+        if (vidaRobo1 > vidaRobo2) {
+            alert("O robo Azul venceu! pressione OK para jogar recomeçar")
+            
+           
+        }else{
+            alert("O robo branco venceu! pressione OK para jogar recomeçar")
+        }
+        numColisao = 0;
+        //atualiza a página após o fim da rodada
+        window.location.reload()
+    }
+}
+
+
 
 
 function atualizarTela() {
     window.requestAnimationFrame(atualizarTela, canvas)
+    colisao()
     inserirImagem();
     moverrobo()
     moverrobo2();
